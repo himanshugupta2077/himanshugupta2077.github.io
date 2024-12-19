@@ -36,7 +36,7 @@ export const siteConfig: Config = {
   description: ui[DEFAULT_LANG]["site.description"].text,
   lang: DEFAULT_LANG,
   profile: {
-    author: "Amy Dang",
+    author: "Himanshu Gupta",
     description: ui[DEFAULT_LANG]["profile.description"].text
   },
   settings: {
@@ -53,23 +53,23 @@ export const SOCIAL_LINKS: Array<SocialLink> = [
   {
     icon: "mdi:github",
     friendlyName: "Github",
-    link: "https://github.com/kirontoo/astro-theme-cody",
+    link: "https://github.com/himanshugupta2077/himanshugupta2077.github.io",
   },
   {
     icon: "mdi:linkedin",
     friendlyName: "LinkedIn",
-    link: "#",
+    link: "https://www.linkedin.com/in/himanshugupta2077/",
   },
   {
     icon: "mdi:email",
     friendlyName: "email",
-    link: "mailto:ndangamy@gmail.com",
+    link: "mailto:himanshu.infosec007@gmail.com",
   },
-  {
-    icon: "mdi:rss",
-    friendlyName: "rss",
-    link: "/rss.xml"
-  }
+  // {
+  //   icon: "mdi:rss",
+  //   friendlyName: "rss",
+  //   link: "/rss.xml"
+  // }
 ];
 
 // NOTE: match these entries with keys in `src/i18n/nav.ts`

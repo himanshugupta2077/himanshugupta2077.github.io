@@ -1,6 +1,6 @@
 ---
 title: 'Project 1'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+description: 'description'
 pubDate: 'Apr 03 2023'
 heroImage:
     url: '/blog-placeholder-about.jpg'
