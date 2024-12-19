@@ -24,7 +24,7 @@ jobs:
         uses: withastro/action@v3
         with:
           package-manager: pnpm@8 # Specify the exact pnpm version
-          node-version: 20 # Ensure the Node.js version is compatible
+          node-version: 20 # Ensure the Node.js version is compatible yes
 
   deploy:
     needs: build
