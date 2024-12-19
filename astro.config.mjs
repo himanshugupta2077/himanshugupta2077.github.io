@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'http://himanshu-gupta.com/',
+  site: 'https://himanshu-gupta.com/',
   integrations: [mdx(), sitemap(), tailwind()],
   // NOTE: Make sure this matches your supported languages in the file: src/consts.ts
   i18n: {
