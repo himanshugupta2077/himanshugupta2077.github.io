@@ -68,9 +68,6 @@ const paginationProps = {
 <BaseLayout {...meta}>
 	<section class="cody-bg">
 		<h1 class="title">Posts</h1>
-		<p class="mb-4 sm:mb-8">
-			loading ...
-		</p>
 		<ul class="flex flex-col gap-4">
 			{page.data.map((post) => <PostPreview post={post} withDesc />)}
 		</ul>
