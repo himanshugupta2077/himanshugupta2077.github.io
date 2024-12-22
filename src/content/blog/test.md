@@ -1,6 +1,6 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
+title: 'Test post'
+description: 'Test post'
 pubDate: 'Jul 08 2022'
 heroImage: 
   src: '/blog-placeholder-5.jpg'
