@@ -6,7 +6,7 @@ heroImage:
     url: '/1.png'
     alt: 'GitHub wallpaper'
 platform: Desktop (Linux)
-stack: ['Python', 'Tkinter', 'MongoDB']
+stack: ['Python']
 # website: https://github.com/kirontoo/astro-theme-cody
 github: https://github.com/himanshugupta2077/SafePass
 ---
