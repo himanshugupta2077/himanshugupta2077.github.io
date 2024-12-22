@@ -12,10 +12,10 @@ export default {
             text: "Himanshu Gupta"
         },
         "site.description": {
-            text: "A minimalist blog theme built with Astro. A quick and easy starter build for anyone who wants to start their own blog."
+            text: ""
         },
         "profile.description": {
-            text: "your bio description"
+            text: "your neighborhood friendly hacker"
         },
         "blog.lastUpdated": {
             text: "Last updated:"
