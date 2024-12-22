@@ -151,20 +151,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"en/multi-lang-test.md": {
-	id: "en/multi-lang-test.md";
-  slug: "en/multi-lang-test";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"es/multi-lang-test.md": {
-	id: "es/multi-lang-test.md";
-  slug: "es/multi-lang-test";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 "first-post.md": {
 	id: "first-post.md";
   slug: "first-post";
@@ -181,34 +167,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "project": {
-"es/project-1.md": {
-	id: "es/project-1.md";
-  slug: "es/project-1";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"es/project-2.md": {
-	id: "es/project-2.md";
-  slug: "es/project-2";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"es/project-3.md": {
-	id: "es/project-3.md";
-  slug: "es/project-3";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
-"es/project-4.md": {
-	id: "es/project-4.md";
-  slug: "es/project-4";
-  body: string;
-  collection: "project";
-  data: InferEntrySchema<"project">
-} & { render(): Render[".md"] };
 "project-1.md": {
 	id: "project-1.md";
   slug: "project-1";
