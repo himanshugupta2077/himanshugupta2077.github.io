@@ -12,7 +12,7 @@ export default {
             text: "Himanshu Gupta"
         },
         "site.description": {
-            text: ""
+            text: "portfolio of Himanshu Gupta"
         },
         "profile.description": {
             text: "your neighborhood friendly hacker"
@@ -35,13 +35,13 @@ export default {
     },
     "es": {
         "site.title": {
-            text: "Astro Theme Cody"
+            text: "Himanshu Gupta"
         },
         "site.description": {
-            text: "Un tema de blog minimalista creado con Astro. Un tema de inicio rápido y sencillo para cualquiera que quiera crear su propio blog."
+            text: "portfolio of Himanshu Gupta"
         },
         "profile.description": {
-            text: "tu descripción biográfica"
+            text: "your neighborhood friendly hacker"
         },
         "blog.lastUpdated": {
             text: "Última actualización:"
