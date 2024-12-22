@@ -25,7 +25,9 @@ type SocialLink = {
 }
 
 export const SUPPORTED_LANGUAGES = {
-  'en': 'en'};
+  'en': 'en',
+  'es': 'es'
+};
 
 export const DEFAULT_LANG = SUPPORTED_LANGUAGES.en as SupportedLanguage;
 
