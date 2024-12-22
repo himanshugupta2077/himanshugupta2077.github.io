@@ -25,9 +25,7 @@ type SocialLink = {
 }
 
 export const SUPPORTED_LANGUAGES = {
-  'en': 'en',
-  'es': 'es'
-};
+  'en': 'en'};
 
 export const DEFAULT_LANG = SUPPORTED_LANGUAGES.en as SupportedLanguage;
 
@@ -74,5 +72,5 @@ export const SOCIAL_LINKS: Array<SocialLink> = [
 
 // NOTE: match these entries with keys in `src/i18n/nav.ts`
 export const NAV_LINKS: Array<keyof typeof nav[SupportedLanguage]> = [
-  "home", "about", "blog", "projects", "archive"
+  "about", "blog", "projects", "archive"
 ];
