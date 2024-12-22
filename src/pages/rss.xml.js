@@ -4,6 +4,8 @@ import { siteConfig } from '../consts';
 
 export async function GET(context) {
 	const posts = await getCollection('blog');
+	const visiblePosts = posts.filter(post => !post.data.hidden);
+
 	return rss({
 		title: siteConfig.title,
 		description: siteConfig.description,
