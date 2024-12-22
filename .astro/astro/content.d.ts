@@ -167,9 +167,9 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "project": {
-"project-1.md": {
-	id: "project-1.md";
-  slug: "project-1";
+"SafePass.md": {
+	id: "SafePass.md";
+  slug: "safepass";
   body: string;
   collection: "project";
   data: InferEntrySchema<"project">
