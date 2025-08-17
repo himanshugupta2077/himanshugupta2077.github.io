@@ -1,12 +1,4 @@
 ---
-import BaseLayout from "@/layouts/Base";
-import PostPreview from "@/components/blog/PostPreviewB";
-import SocialMediaLinks from "@/components/SocialMediaLinks";
-import {
-    filterByLanguage,
-    getAllPosts,
-    sortMDByDate,
-    sortMDByPinned,
-} from "@/utils";
-// ...rest of your imports
+import { DEFAULT_LANG } from "src/consts";
+return Astro.redirect(`/${DEFAULT_LANG}/`);
 ---
