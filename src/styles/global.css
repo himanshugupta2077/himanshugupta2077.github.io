@@ -17,13 +17,13 @@
 
   :root.dark {
     color-scheme: dark;
-    --theme-bg: #1d1d1d;
-    --theme-text: #ededed;
-    --theme-accent: #93e1d4;
-    --theme-accent-2: #545454;
-    --theme-surface: #2f2f2f;
-    --theme-quote: #93e1d4;
-    --theme-highlight: #93e1d4;
+    --theme-bg: #121212;         /* Darker background for better contrast */
+    --theme-text: #ffffff;       /* Pure white text for better readability */
+    --theme-accent: #80ffea;     /* Brighter cyan accent color */
+    --theme-accent-2: #4a4a4a;   /* Slightly lighter secondary accent */
+    --theme-surface: #1f1f1f;    /* Slightly darker surface for distinction */
+    --theme-quote: #80ffea;      /* Match accent color for consistency */
+    --theme-highlight: #80ffea;  /* Match accent color for consistency */
   }
 
   html {
