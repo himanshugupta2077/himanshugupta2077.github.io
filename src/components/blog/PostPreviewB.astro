@@ -7,14 +7,14 @@ import { getLangFromUrl, getSlugFromCollectionEntry } from "@/utils";
 
 interface Props {
     post: CollectionEntry<"blog" | "project">;
-    withDesc?: boolean;  // Add withDesc prop with default value
+    withDesc?: boolean;
 }
 
 const { post, withDesc = false } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const slug = getSlugFromCollectionEntry(post);
 const urlBasePath = post.collection === "project" ? "projects" : post.collection;
-const postDate = "updatedDate" in post.data ? post.data.updatedDate : post.data.pubDate;
+const postDate = post.data.pubDate; // pubDate is required in both blog and project collections
 const pinned: boolean = !!post.data.order;
 ---
 
