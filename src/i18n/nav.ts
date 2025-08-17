@@ -15,8 +15,8 @@ export default {
             slug: ""
         },
         "about": {
-            text: "Whoami",
-            slug: "whoami"
+            text: "About Me",
+            slug: "aboutme"
         },
         "blog": {
             text: "Blog",

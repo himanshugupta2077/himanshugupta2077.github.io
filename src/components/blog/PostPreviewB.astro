@@ -6,44 +6,41 @@ import { Icon } from "astro-icon";
 import { getLangFromUrl, getSlugFromCollectionEntry } from "@/utils";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
-	post: CollectionEntry<"blog">;
-	withDesc?: boolean;
+    post: CollectionEntry<"blog">;
+    withDesc?: boolean;
 };
 
 const { post, withDesc = false } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const slug = getSlugFromCollectionEntry(post);
-const urlBasePath =
-	post.collection === "project" ? "projects" : post.collection;
+const urlBasePath = post.collection === "project" ? "projects" : post.collection;
 const postDate = post.data.updatedDate ?? post.data.pubDate;
 const pinned: boolean = !!post.data.order;
 ---
 
-<li>
-	<div class="flex flex-col gap-x-0 sm:flex-row sm:divide-x sm:divide-accent">
-		<FormattedDate
-			date={postDate}
-			class="min-w-[125px] text-gray-600 dark:text-gray-400"
-		/>
-		<span class="sm:before:ml-4">
-			<a
-				href={`/${lang}/${urlBasePath}/${slug}`}
-				class="cody-link"
-				data-astro-prefetch
-			>
-				{post.data.title}
-			</a>
-			{
-				pinned && (
-					<Icon
-						class="h-5 w-5 inline text-accent rotate-45 ml-1"
-						name="mdi:pin"
-						aria-hidden="true"
-						focusable="false"
-					/>
-				)
-			}
-		</span>
-	</div>
-	{withDesc && <p class="italic">{post.data.description}</p>}
-</li>
+<div class="bg-white dark:bg-gray-800 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+    <div class="flex items-center gap-4">
+        <FormattedDate
+            date={postDate}
+            class="text-sm text-gray-600 dark:text-gray-400 min-w-[90px]"
+        />
+        <div class="flex-1">
+            <a
+                href={`/${lang}/${urlBasePath}/${slug}`}
+                class="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400"
+                data-astro-prefetch
+            >
+                {post.data.title}
+                {pinned && (
+                    <Icon
+                        class="h-4 w-4 inline text-blue-600 dark:text-blue-400 rotate-45 ml-1"
+                        name="mdi:pin"
+                        aria-hidden="true"
+                        focusable="false"
+                    />
+                )}
+            </a>
+            {withDesc && <p class="mt-2 text-gray-600 dark:text-gray-300">{post.data.description}</p>}
+        </div>
+    </div>
+</div>

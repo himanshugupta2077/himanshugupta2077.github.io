@@ -3,10 +3,10 @@ import BaseLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreviewB";
 import SocialMediaLinks from "@/components/SocialMediaLinks";
 import {
-	filterByLanguage,
-	getAllPosts,
-	sortMDByDate,
-	sortMDByPinned,
+    filterByLanguage,
+    getAllPosts,
+    sortMDByDate,
+    sortMDByPinned,
 } from "@/utils";
 import type { CollectionEntry } from "astro:content";
 
@@ -15,57 +15,93 @@ const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts);
 const allPostsByPinned = sortMDByPinned(allPostsByDate);
 const filteredPostsByLanguage = filterByLanguage(allPostsByPinned, "en").slice(0, MAX_POSTS);
-
 ---
 
 <BaseLayout title="Home">
-	<section>
-		<h1 class="title">Ethical Hacker</h1>
-		<p class="mb-2">
-			Working as a Penetration tester at <a href="https://securityboat.net/" style="text-decoration: underline;" target="_blank" rel="noopener noreferrer">SecurityBoat</a>.
-		</p>
-		<p class="mb-2">
-			Creator of <a href="https://github.com/himanshugupta2077/SafePass/" style="text-decoration: underline;" target="_blank" rel="noopener noreferrer">SafePass</a> and <a href="https://github.com/himanshugupta2077/PentestPilot/" style="text-decoration: underline;" target="_blank" rel="noopener noreferrer">PentestPilot</a>.
-		</p>
-		<p class="mb-2">
-			Undertake freelance projects in my free time.
-		</p>
-	</section>
+    <main class="container mx-auto px-4">
+        <section class="py-12">
+            <h1 class="title text-4xl font-bold mb-6">Hi, I'm Himanshu 👋</h1>
+            <div class="text-lg space-y-4">
+                <p class="leading-relaxed">
+                    I'm an <span class="text-blue-600 dark:text-blue-400 font-semibold">Ethical Hacker</span> working as a Penetration Tester at 
+                    <a href="https://securityboat.net/" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">SecurityBoat</a>.
+                </p>
+                <p class="leading-relaxed">
+                    I'm passionate about cybersecurity and have created tools like 
+                    <a href="https://github.com/himanshugupta2077/SafePass/" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">SafePass</a> and 
+                    <a href="https://github.com/himanshugupta2077/PentestPilot/" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">PentestPilot</a> 
+                    to help make the digital world more secure.
+                </p>
+            </div>
+        </section>
 
-	<section class="mt-8 sm:mt-16">
-		<h2 class="title">What I do?</h2>
-		<p class="mb-2">
-			I perform penetration testing on Web applications, Mobile applications, API, Infrastructure, Thick Client Application and also perform Secure Code Review.
-		</p>
-	</section>
+        <section class="py-8 border-t border-gray-200 dark:border-gray-800">
+            <h2 class="title text-3xl font-bold mb-6">What I Do</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3">Security Services</h3>
+                    <ul class="space-y-2">
+                        <li>🔍 Web Application Penetration Testing</li>
+                        <li>📱 Mobile Application Security Assessment</li>
+                        <li>🔐 API Security Testing</li>
+                        <li>🖥️ Infrastructure Security</li>
+                        <li>💻 Thick Client Application Testing</li>
+                        <li>📝 Secure Code Review</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-3">Additional Work</h3>
+                    <ul class="space-y-2">
+                        <li>🚀 Freelance Security Consulting</li>
+                        <li>🛠️ Security Tool Development</li>
+                        <li>📊 Security Assessment Reports</li>
+                        <li>🤝 Client Security Advisory</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-	<!-- <section class="mt-8 sm:mt-16">
-		<h2 class="title">Posts</h2>
-		<ul class="space-y-4 sm:space-y-2">
-			{
-				filteredPostsByLanguage.map((p) => (
-					<PostPreview post={p as CollectionEntry<"blog">} />
-				))
-			}
-		</ul>
-	</section> -->
+        <section class="py-8 border-t border-gray-200 dark:border-gray-800">
+            <h2 class="title text-3xl font-bold mb-6">Recent Blog Posts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {filteredPostsByLanguage.map((post) => (
+                    <PostPreview post={post} />
+                ))}
+            </div>
+        </section>
 
-	<!-- <section class="mt-16">
-		<h2 class="title">Projects</h2>
-		<ul class="space-y-4 sm:space-y-2">
-			{
-				filteredPostsByLanguage.map((p) => (
-					<PostPreview post={p as CollectionEntry<"blog">} />
-				))
-			}
-		</ul>
-	</section> -->
-	
-	<section class="mt-8 sm:mt-16">
-		<div>
-			<span>You can find me on: </span>
-			<SocialMediaLinks />
-		</div>
-	</section>
+        <section class="py-8 border-t border-gray-200 dark:border-gray-800">
+            <h2 class="title text-3xl font-bold mb-6">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">SafePass</h3>
+                    <p class="text-gray-	600 dark:text-gray-300 mb-4">
+                        A secure password management solution with advanced encryption.
+                    </p>
+                    <a href="https://github.com/himanshugupta2077/SafePass/" 
+                       class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
+                        View Project <span class="ml-2">→</span>
+                    </a>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">PentestPilot</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Automated penetration testing toolkit for security professionals.
+                    </p>
+                    <a href="https://github.com/himanshugupta2077/PentestPilot/" 
+                       class="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center">
+                        View Project <span class="ml-2">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
+        <section class="py-8 border-t border-gray-200 dark:border-gray-800">
+            <h2 class="title text-3xl font-bold mb-6">Connect With Me</h2>
+            <div class="flex items-center gap-4">
+                <span class="text-lg">Find me on:</span>
+                <SocialMediaLinks />
+            </div>
+        </section>
+    </main>
 </BaseLayout>

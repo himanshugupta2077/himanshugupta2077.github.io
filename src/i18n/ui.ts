@@ -9,7 +9,7 @@ import type { SupportedLanguage } from "src/utils/i18n";
 export default {
     "en": {
         "site.title": {
-            text: "Himanshu Gupta"
+            text: "Home"
         },
         "site.description": {
             text: "portfolio of Himanshu Gupta"
@@ -35,7 +35,7 @@ export default {
     },
     "es": {
         "site.title": {
-            text: "Himanshu Gupta"
+            text: "Home"
         },
         "site.description": {
             text: "portfolio of Himanshu Gupta"
